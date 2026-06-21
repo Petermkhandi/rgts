@@ -1,0 +1,172 @@
+/* RUCU GETS - Custom Styles */
+
+:root {
+    --rucu-primary: #1a5276;
+    --rucu-primary-dark: #154360;
+    --rucu-secondary: #2ecc71;
+    --rucu-accent: #f39c12;
+    --rucu-danger: #e74c3c;
+    --rucu-info: #3498db;
+}
+
+body {
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-rucu { background-color: var(--rucu-primary) !important; }
+.text-rucu { color: var(--rucu-primary) !important; }
+
+.btn-rucu {
+    background-color: var(--rucu-primary);
+    color: #fff;
+    border: none;
+}
+.btn-rucu:hover {
+    background-color: var(--rucu-primary-dark);
+    color: #fff;
+}
+
+.btn-outline-rucu {
+    border: 2px solid var(--rucu-primary);
+    color: var(--rucu-primary);
+}
+.btn-outline-rucu:hover {
+    background-color: var(--rucu-primary);
+    color: #fff;
+}
+
+/* Cards */
+.stat-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+.stat-card .stat-icon {
+    font-size: 2.5rem;
+    opacity: 0.8;
+}
+
+/* Tables */
+.table-hover tbody tr:hover {
+    background-color: rgba(26, 82, 118, 0.05);
+}
+
+/* Badges */
+.badge {
+    font-weight: 500;
+    padding: 0.4em 0.8em;
+}
+
+/* Sidebar */
+.sidebar {
+    min-height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--rucu-primary);
+    color: #fff;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+.sidebar .brand {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.sidebar .nav-link {
+    color: rgba(255,255,255,0.8);
+    padding: 12px 20px;
+    border-radius: 0;
+}
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: #fff;
+    background: rgba(255,255,255,0.15);
+}
+.sidebar .nav-link i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Main content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    min-height: 100vh;
+}
+.topbar {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Login page */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--rucu-primary) 0%, var(--rucu-primary-dark) 100%);
+}
+.login-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+/* Forms */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--rucu-primary);
+    box-shadow: 0 0 0 0.2rem rgba(26, 82, 118, 0.25);
+}
+
+/* Progress bars */
+.progress {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progress-bar {
+    transition: width 0.6s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        position: relative;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .stat-card .stat-icon {
+        font-size: 2rem;
+    }
+}
+
+/* Loading spinner */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.2em;
+}
+
+/* Print styles */
+@media print {
+    .sidebar, .topbar, .btn, nav {
+        display: none !important;
+    }
+    .main-content {
+        margin-left: 0 !important;
+    }
+}
